@@ -3,6 +3,11 @@
 O que mudou em cada versão deste repositório, da mais nova para a mais antiga.
 Cada versão tem data (`AAAA-MM-DD`) e as seções que forem usadas: Adicionado, Alterado, Corrigido, Removido.
 
+## 1.0.0 — 2026-09-27
+
+Primeira versão estável. O conteúdo é o mesmo da 1.0.0-rc.1.
+Daqui em diante, se um arquivo mudar de caminho, a versão sobe para 2.0.0.
+
 ## 1.0.0-rc.1 — 2026-09-25
 
 ### Adicionado
