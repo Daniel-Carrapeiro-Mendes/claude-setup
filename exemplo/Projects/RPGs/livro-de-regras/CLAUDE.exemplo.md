@@ -55,6 +55,7 @@ A coluna de dependência é a que importa: é ela que me diz o que vai quebrar q
 
 - Cada termo de regra é definido **uma vez**, no lugar dele, e usado igual no livro inteiro.
 - Ao introduzir termo novo, me diga onde ele ficou definido e em que outros lugares ele aparece.
+- **Apelido não é termo de regra.** Um nome do mundo pode ter apelido popular, mas o apelido só aparece na narrativa e na fala dos personagens. Regra, tabela e ficha usam sempre o nome inteiro.
 
 ### Depois de escrever ou mudar uma regra — bloco "Como playtestar"
 

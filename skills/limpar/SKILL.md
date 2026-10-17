@@ -24,7 +24,7 @@ Antes de eu limpar, tudo que importa tem que estar em arquivo. Um prompt copiado
 - `ROADMAP.md`: reescreva "Onde estou" e "Próximo passo sugerido" com o estado real agora, inclusive o que ficou pela metade e em que ponto exato parou.
 - Decisão tomada nesta sessão que ainda não está escrita vai para a seção "Decisões" do mapa do projeto (`ARQUITETURA.md`, `ESTRUTURA.md` ou `CAMPANHA.md`).
 - Mudança concluída que ainda não está no histórico vai para o `CHANGELOG.md` ou para o registro de sessão.
-- Se combinamos algo nesta conversa que deveria valer sempre, não salve sozinho: me proponha a linha para o CLAUDE.md.
+- Se combinamos algo nesta conversa que deveria valer sempre, não ponha no CLAUDE.md sozinho: me proponha a linha **e anote a proposta** no `ROADMAP.md`, em "Ideias soltas", como "Sessão de manutenção: ...", com a data.
 - Se há mudança de código sem commit, me avise e pergunte se quero commitar antes.
 
 Depois, diga numa lista curta quais arquivos você atualizou.

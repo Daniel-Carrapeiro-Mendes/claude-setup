@@ -1,11 +1,12 @@
 ---
 name: push
-description: Envia os commits locais para o repositório remoto, com checagens de segurança antes. Acionada apenas pelo usuário com /push.
+description: Envia os commits locais para o repositório remoto, depois de checar o estado do repositório e procurar segredos no que vai subir. Acionada apenas pelo usuário com /push.
 argument-hint: "[instruções extras opcionais]"
 disable-model-invocation: true
 context: fork
 model: haiku
 background: false
+# git push fica de fora de propósito: a regra "ask" do settings.json global vence o allowed-tools, e aqui liberaria até --force se ela sair.
 allowed-tools:
   - Bash(git status)
   - Bash(git status *)
@@ -13,6 +14,8 @@ allowed-tools:
   - Bash(git log *)
   - Bash(git remote *)
   - Bash(git diff *)
+  - Bash(gitleaks git *)
+  - Bash(gitleaks stdin *)
 ---
 
 Sua tarefa é enviar os commits locais deste repositório para o remoto, com segurança.
@@ -36,18 +39,34 @@ Pare e apenas relate (sem tentar consertar) se qualquer uma destas condições f
 
 Se a branch atual for `main` ou `master`, pode continuar, mas destaque isso com clareza no relatório final.
 
-## Passo 3 — Push
+## Passo 3 — Busca de segredos
+
+Procure senhas, tokens e chaves nos commits que ainda não estão em nenhum remoto, ou seja, no que vai subir. Rode os dois comandos, exatamente assim:
+
+- `gitleaks git --log-opts="HEAD --not --remotes" --redact --no-banner -v .` — olha o conteúdo dos arquivos em cada commit.
+- `git log --format=%B HEAD --not --remotes | gitleaks stdin --redact --no-banner -v` — olha as mensagens dos commits.
+
+Só siga para o push se **os dois** terminarem com `no leaks found`. Em qualquer outro caso (`leaks found`, erro, `gitleaks` não encontrado), **não suba nada**:
+
+- Para cada achado, relate o arquivo, a linha, o commit e a regra (`RuleID`). Nas mensagens de commit não há arquivo: diga só a regra e o trecho mostrado.
+- Nunca rode sem `--redact` e nunca tente descobrir o valor escondido.
+- Não tente consertar. Tirar um segredo de um commit exige reescrever o histórico, e isso é decisão do usuário.
+- Se achar que é alarme falso, diga isso no relatório, mas não suba mesmo assim.
+
+## Passo 4 — Push
 
 - Se a branch já acompanha uma branch remota: `git push`
 - Se ainda não acompanha: `git push -u origin <branch-atual>`
+- O push vai pedir confirmação ao usuário. Isso é esperado: é a última checagem, feita por ele.
 - **Nunca** use `--force`, `--force-with-lease`, `--delete` ou `--mirror`. Se achar que algum deles é necessário, pare e explique o motivo, deixando a decisão para o usuário.
 - Se o push for rejeitado (por exemplo, "non-fast-forward" ou "fetch first"), **não tente resolver sozinho**. Relate o erro exatamente como apareceu e sugira que o usuário avalie um `git pull --rebase`.
 
-## Passo 4 — Relatório final
+## Passo 5 — Relatório final
 
 Seja curto e objetivo:
 
 - Branch de origem e destino (remoto)
+- Resultado da busca de segredos: quantos commits foram olhados e se algo foi encontrado
 - Quantos commits foram enviados, com uma linha por commit
 - Ou, se nada foi enviado, o motivo
 

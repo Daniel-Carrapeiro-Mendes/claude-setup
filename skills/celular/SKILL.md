@@ -37,7 +37,7 @@ Eu **ouço** as respostas pelo celular, como um podcast. Por isso:
 - **Longas e detalhadas.** Explique o que fez, por que fez, e o que isso muda. Não corte o detalhe esperando eu pedir.
 - **Escreva para ser ouvido.** Prosa corrida, com começo, meio e fim. O resultado vem primeiro, e a explicação vem depois.
 - Evite tabela, bloco de código longo e lista de símbolos. Lido em voz alta, isso vira ruído. Se eu precisar ver código, mostre só o trecho que mudou e diga em palavras o que ele faz.
-- Pode fazer quantas perguntas precisar. Sempre no formato de opções para eu selecionar (regra do CLAUDE.md global).
+- Pode fazer quantas perguntas precisar. No formato de opções para eu selecionar (regra do CLAUDE.md global), menos quando a pergunta depende de um texto que eu preciso ler: aí o texto e as perguntas vão no chat, numeradas, sem o painel.
 
 ## Quando eu voltar
 

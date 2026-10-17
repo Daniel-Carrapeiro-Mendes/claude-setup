@@ -14,10 +14,10 @@ meu jeito de trabalhar.
 Cada item mostra onde o arquivo fica na minha máquina. O link abre a cópia.
 
 - [`~/.claude/CLAUDE.md`](exemplo/claude-global/CLAUDE.exemplo.md) — o que vale sempre: como me
-  explicar as coisas, o que fazer antes de executar, como entregar.
+  explicar as coisas, o que fazer antes de executar, como entregar e como trazer ideias.
 - `~/Documents/Projects/`
   - [`Sistemas/CLAUDE.md`](exemplo/Projects/Sistemas/CLAUDE.exemplo.md) — projetos de software:
-    bloco "Como testar", versão, `ARQUITETURA.md`, segredos e git.
+    bloco "Como testar", versão, changelog escrito para quem usa, `ARQUITETURA.md`, segredos e git.
     - [`Sites/meu-site/CLAUDE.md`](exemplo/Projects/Sistemas/Sites/meu-site/CLAUDE.exemplo.md) —
       aperta uma regra: push na `main` publica o site, então tudo passa por branch e prévia.
     - [`Sites/meu-app/CLAUDE.md`](exemplo/Projects/Sistemas/Sites/meu-app/CLAUDE.exemplo.md) —
@@ -43,8 +43,18 @@ Uma skill é um roteiro que o Claude Code segue quando eu digito o comando dela.
   rodando, salva o estado e responde com um veredito.
 - [`/limpar`](skills/limpar/SKILL.md) — passagem para uma sessão nova: salva o estado em arquivo e
   diz se vale `/clear` ou `/compact`.
-- [`/push`](skills/push/SKILL.md) — envia os commits depois de conferir o git. Nunca força, nunca
-  commita por mim, e não procura segredo: essa conferência vem antes, no commit.
+- [`/push`](skills/push/SKILL.md) — envia os commits depois de conferir o git e procurar segredo
+  no que vai subir, com o gitleaks. Nunca força e nunca commita por mim.
+
+### Em teste
+
+Estas eu ainda não usei de verdade, do começo ao fim. Ficam aqui até eu usar; aí sobem para a
+lista de cima.
+
+- [`/independente`](skills/em-teste/independente/SKILL.md) — modo autônomo: o Claude toca a tarefa
+  sozinho, deixa cada decisão fácil de desfazer, e no fim me entrega um relatório para revisar.
+- [`/nuvem`](skills/em-teste/nuvem/SKILL.md) — passagem entre o computador e uma sessão na nuvem:
+  diz o que fica para trás, salva o estado em arquivo e me ensina a voltar.
 
 ## Autor
 

@@ -12,7 +12,7 @@ Se eu decidir manter o projeto depois, as regras passam a valer dali pra frente.
 
 ## Roadmap
 
-No `ROADMAP.md` (regras no CLAUDE.md global), **um marco é uma versão alvo**: `0.2.0`, `0.3.0`, `1.0.0-beta.1`, `1.0.0`. Quando um marco fecha, os itens dele viram a entrada daquela versão no `CHANGELOG.md`.
+No `ROADMAP.md` (regras no CLAUDE.md global), **um marco é uma versão alvo**: `0.2.0`, `0.3.0`, `1.0.0-beta.1`, `1.0.0`. Quando um marco fecha, os itens dele viram a entrada daquela versão no `CHANGELOG.md`, **reescritos para quem usa**, com as regras de "Como escrever o changelog" (abaixo). Item de roadmap é escrito para quem programa; copiado sem reescrever, ele vaza para o usuário.
 
 ## Depois de implementar — bloco "Como testar" obrigatório
 
@@ -45,9 +45,19 @@ Todo projeto tem uma versão em **SemVer** (Semantic Versioning / versionamento 
   - **MENOR** (MINOR) sobe em funcionalidade nova que não quebra o que existia — `1.2.4 → 1.3.0`
   - **MAIOR** (MAJOR) sobe quando algo que funcionava antes deixa de funcionar do mesmo jeito — `1.3.0 → 2.0.0`
 - **Ao subir MAIOR, zera MENOR e CORREÇÃO. Ao subir MENOR, zera CORREÇÃO.** Nunca `1.3.4 → 2.3.4`.
-- Mantenha um **`CHANGELOG.md`** na raiz, versão mais nova em cima, com as seções que forem usadas: Adicionado, Alterado, Corrigido, Removido. Uma linha por mudança, escrita para usuário, não para programador. Toda versão tem **data** (`AAAA-MM-DD`) ao lado do número — isso vale para toda versão, inclusive pré-lançamentos.
+- Mantenha um **`CHANGELOG.md`** na raiz, versão mais nova em cima, com as seções que forem usadas: Adicionado, Alterado, Corrigido, Removido. Um item por mudança, escrito para quem usa, não para quem programa (ver "Como escrever o changelog"). Toda versão tem **data** (`AAAA-MM-DD`) ao lado do número — isso vale para toda versão, inclusive pré-lançamentos.
 
 Ao propor subir a versão, **diga qual parte do número sobe e por quê**. Se estiver em dúvida entre MENOR e MAIOR, pergunte: a diferença é se algo que funcionava antes parou de funcionar.
+
+### Como escrever o changelog
+
+Quem lê o `CHANGELOG.md` é quem clicou no número da versão: a pessoa que usa o projeto e não conhece o código. O "como" fica no commit e nas "Decisões" do `ARQUITETURA.md`.
+
+- Cada item diz o que a pessoa **nota ou passa a conseguir fazer**. "Dá para marcar uma tarefa como feita direto na lista, sem abrir a tarefa" — não "Atalho de conclusão na listagem (RF04)".
+- Sem nome de arquivo, pasta, função, biblioteca, comando de terminal ou código de requisito. Só aparece o que a própria pessoa usa: o comando que ela digita no bot, o endereço do site.
+- Mudança que ninguém nota não entra: refatoração, pasta reorganizada, teste, ferramenta de quem programa. Se a versão só tem isso, uma linha: "Ajustes por dentro, sem mudança para quem usa." Atualização de segurança entra, dita para quem usa.
+- No máximo duas frases por item. O porquê entra só quando ajuda a pessoa ("se o ícone velho continuar, feche e abra a aba").
+- Dentro de cada seção, o mais importante primeiro.
 
 ### Pré-lançamento (alpha, beta, rc) e canal de estabilidade
 

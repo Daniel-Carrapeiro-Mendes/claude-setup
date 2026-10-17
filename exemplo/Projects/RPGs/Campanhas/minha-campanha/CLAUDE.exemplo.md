@@ -28,6 +28,7 @@ Um arquivo por sessão, numerado e datado (`sessao-01-2025-10-04.md`): o que aco
 
 - Escreva o que **aconteceu na mesa**, não o que eu tinha planejado. Quando os dois divergirem, vale o que aconteceu.
 - Ao registrar uma sessão, atualize o `CAMPANHA.md` no mesmo passo — tabelas, trama atual e ganchos.
+- **Registro por partes.** Quando o mestre conta a sessão por partes, cada parte entra no registro assim que é contada, com commit. O que ela muda em outros arquivos (fichas, ideia geral, linha do tempo) fica listado no fim do registro, em "O que esta parte mexe nos outros arquivos", e só é aplicado depois, com a decisão do mestre. O que a mesa não sabe vai marcado com 🔒 SEGREDO, separado do que foi jogado.
 
 ### Roadmap
 
@@ -45,13 +46,15 @@ Três estados, e eu preciso enxergar qual é qual:
 - **Rascunho** — escrito, mas ainda não foi pra mesa. Pode mudar à vontade.
 - **Segredo** — é canon, mas os jogadores ainda não sabem.
 
-Ao gerar material, diga para quem ele é: **meu** (mestre) ou **da mesa** (jogadores). Se for da mesa, nada de segredo dentro — nem em nota de rodapé, nem em nome de arquivo.
+**Os arquivos desta pasta são só do mestre.** Nenhum jogador lê estes documentos: escreva tudo por inteiro, sem aviso de spoiler e sem etapa ou pergunta só para esconder informação dos jogadores. Segredo é um estado da história, não um cuidado com o arquivo.
+
+O que sai desta pasta é outra coisa: texto lido em voz alta, artifact de jogador e handout. Ao gerar esse material, diga que ele é **da mesa**, e nada de segredo dentro — nem em nota de rodapé, nem em nome de arquivo.
 
 ### Antes da sessão — bloco "Como levar isso pra mesa"
 
 Toda preparação termina com:
 
 1. **O que eu leio em voz alta** — já pronto, sem eu precisar reescrever na hora.
-2. **Os números que eu vou precisar** — fichas, dificuldades, iniciativa, o que estiver em jogo, tudo num lugar só.
+2. **Onde pode precisar de rolagem** — os momentos, sem números. A mecânica é do mestre; sugestão de mecânica vem curta e marcada como opcional.
 3. **O que provavelmente vai sair do roteiro** — a decisão que os jogadores podem tomar e que você não previu, e o que eu faço se tomarem.
 4. **O que pode ficar pra próxima** se o tempo acabar.
