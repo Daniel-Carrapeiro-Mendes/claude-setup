@@ -41,6 +41,8 @@ Uma skill é um roteiro que o Claude Code segue quando eu digito o comando dela.
   venceu, mas se na sua versão abrir o `/doctor`, renomeie.
 - [`/desligar`](skills/desligar/SKILL.md) — posso desligar a máquina agora? Confere o que está
   rodando, salva o estado e responde com um veredito.
+- [`/independente`](skills/independente/SKILL.md) — modo autônomo: o Claude toca a tarefa
+  sozinho, deixa cada decisão fácil de desfazer, e no fim me entrega um relatório para revisar.
 - [`/limpar`](skills/limpar/SKILL.md) — passagem para uma sessão nova: salva o estado em arquivo e
   diz se vale `/clear` ou `/compact`.
 - [`/push`](skills/push/SKILL.md) — envia os commits depois de conferir o git e procurar segredo
@@ -48,11 +50,9 @@ Uma skill é um roteiro que o Claude Code segue quando eu digito o comando dela.
 
 ### Em teste
 
-Estas eu ainda não usei de verdade, do começo ao fim. Ficam aqui até eu usar; aí sobem para a
+Esta eu ainda não usei de verdade, do começo ao fim. Fica aqui até eu usar; aí sobe para a
 lista de cima.
 
-- [`/independente`](skills/em-teste/independente/SKILL.md) — modo autônomo: o Claude toca a tarefa
-  sozinho, deixa cada decisão fácil de desfazer, e no fim me entrega um relatório para revisar.
 - [`/nuvem`](skills/em-teste/nuvem/SKILL.md) — passagem entre o computador e uma sessão na nuvem:
   diz o que fica para trás, salva o estado em arquivo e me ensina a voltar.
 

@@ -66,7 +66,7 @@ Todo projeto que eu pretendo manter tem um **`ROADMAP.md`** na raiz. É a primei
 Ele não repete os outros arquivos do projeto — cada um responde uma pergunta:
 
 - **De onde eu vim** — o histórico (`CHANGELOG.md`, ou o registro de sessões na campanha).
-- **Como as coisas estão montadas** — o mapa (`ARQUITETURA.md`, `ESTRUTURA.md` ou `CAMPANHA.md`).
+- **Como as coisas estão montadas** — o mapa (`ARQUITETURA.md`, `ESTRUTURA.md`, `CAMPANHA.md` ou, na raiz de Projects, `MAPA.md`).
 - **Para onde eu vou** — o `ROADMAP.md`. Só o presente e o futuro.
 
 O arquivo tem, nesta ordem:
@@ -81,10 +81,29 @@ Regras:
 - **O roadmap é meu.** Na criação, proponha e espere eu aprovar antes de gravar. Depois, não mude ordem, escopo ou prioridade calado — proponha a mudança e diga por quê.
 - **Atualize na mesma tarefa.** Terminou algo: marque o item, reescreva "Onde estou" e o "Próximo passo".
 - Item concluído fica marcado até o marco fechar. Quando o marco fecha, ele sai do roadmap — o registro passa a viver no histórico.
+- **Pedido entre projetos mora em quem vai fazer.** Quando um projeto precisa de outro, o pedido vai para as Ideias soltas do `ROADMAP.md` de quem vai fazer, com a data e de onde veio. Quem espera só aponta para lá. Se quem vai fazer não tem roadmap, o pedido fica no roadmap de manutenção, na raiz de Projects.
 - **Quando eu voltar ao projeto** — perguntar "onde parei?" ou começar a sessão sem tarefa específica —, leia o `ROADMAP.md` e responda em quatro partes curtas: onde parei, onde estou, o próximo passo que você sugere, e por quê.
 - **Critério da sugestão:** primeiro o que destrava outras tarefas; depois o que fecha o marco atual; por último o resto. Diga qual critério você usou.
 - Plano de uma tarefa (plan mode) não substitui o roadmap: ele detalha **um** item do roadmap, e diz qual.
 - Projeto de uma tarefa só, ou que eu avisei ser "só um teste", não precisa de roadmap.
+
+## Modelo e esforço
+
+Quem troca o modelo e o esforço sou eu (`/model`, `/effort`). Você me orienta, e não troca nada sozinho:
+- **No fim de toda tarefa concluída** (código, texto, relatório, plano), uma linha: o modelo e o esforço que você usou, e o que sugere para a próxima, com o porquê. Exemplo: "Usei Sonnet 5.5 · Médio. Para a próxima, sugiro Opus 5.5 · Alto: ela mexe em várias áreas e tem muitas decisões." Conversa curta e pergunta rápida ficam sem a linha.
+- **Antes do trabalho pesado**, se a tarefa parecer importante ou difícil demais para o modelo e o esforço desta sessão, pare e pergunte com a ferramenta de perguntas se eu quero trocar. Não comece até eu responder. Em tarefa pequena, não pergunte. Em `/independente`, não pare: anote no relatório.
+- No "Próximo passo sugerido" do roadmap e no fim de todo plano, a mesma sugestão, com o porquê.
+- Para saber o que está em uso: o esforço está na variável `CLAUDE_EFFORT` (`printenv CLAUDE_EFFORT`), e o modelo é o que o sistema diz que você é. Se não souber, diga que não sabe; não chute.
+
+- Haiku 5.5 · Baixo/Médio: pergunta rápida, formatar, buscar.
+- Sonnet 5.5 · Médio: o padrão. Bug, ajuste, escrita, revisão de texto.
+- Sonnet 5.5 · Alto: código não trivial, análise de documento.
+- Opus 5.5 · Alto: tarefa vaga, arquitetura, muitas decisões, revisão importante.
+- Opus 5.5 · Extra: sessão longa de código ou de agente. Max: só problema muito difícil e crítico.
+- Ultracode: só migração ou refatoração grande; me lembre de desligar.
+- Fable 5.1: só se o Opus em Alto já falhou.
+
+Suba o esforço antes de trocar de modelo. Se o modelo desta sessão não estiver nesta lista, avise que ela ficou velha.
 
 ## Seja criativo
 

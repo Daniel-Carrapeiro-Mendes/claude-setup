@@ -20,6 +20,7 @@ Se você achar que alguma prática de software resolveria um problema real daqui
 - Termo de regra tem **um** nome só. Use o nome que já existe no meu sistema.
 - Não traga vocabulário de D&D, Pathfinder ou outro sistema sem eu pedir. Se o meu sistema não tem um conceito, ele não tem — não preencha com o de fora.
 - Se eu usar um termo que não existe no meu sistema, ou dois nomes para a mesma coisa, **me avise** em vez de adotar junto.
+- **Toda falha é interessante.** Nunca "você falhou, nada acontece": quem falha não conseguiu, mas tentou, e algo aconteceu (ficou preso em alguma parte). Quanto pior o resultado, mais forte a consequência, e o melhor resultado é maestria, com mais do que se queria. Teste preparado tem todos os níveis de resultado escritos.
 
 ## Como chamar os personagens
 

@@ -3,6 +3,20 @@
 O que mudou em cada versão deste repositório, da mais nova para a mais antiga.
 Cada versão tem data (`AAAA-MM-DD`) e as seções que forem usadas: Adicionado, Alterado, Corrigido, Removido.
 
+## 1.2.0 — 2026-10-26
+
+### Alterado
+
+- O `CLAUDE.md` global ganhou "Modelo e esforço": no fim de cada tarefa, o Claude avisa o modelo e o esforço que usou e sugere os da próxima. Se a tarefa for pesada demais para o modelo da sessão, ele para e pergunta antes, e quem troca sou eu.
+- O global também ganhou a regra de que pedido entre projetos vai para o roadmap de quem vai fazer, e o mapa da raiz de Projects.
+- O `CLAUDE.md` de software ganhou uma seção de UX, os casos de erro padrão no "Como testar", a regra de mostrar como achar o bug antes de corrigir, a linha "Nesta versão" no topo de cada versão do changelog e uma regra para não dar ao `gh` a permissão de apagar repositório.
+- O de RPG ganhou "toda falha é interessante".
+- `/push`: roda na conversa principal, e não num subagente, para a confirmação do envio aparecer.
+- `/celular`: quando a pergunta depende de um texto, o texto vai no chat e as perguntas vão no painel de opções.
+- `/independente`: ganhou a seção "Exceções às travas", para tarefa de manutenção, e lê o mapa da raiz de Projects.
+- `/nuvem`: o exemplo de projeto sem GitHub ficou mais exato.
+- `/independente` saiu de "Em teste" e passou para a lista principal, em `skills/independente/`. Quem linkava o caminho antigo (`skills/em-teste/independente/`) precisa trocar.
+
 ## 1.1.0 — 2026-10-17
 
 ### Adicionado

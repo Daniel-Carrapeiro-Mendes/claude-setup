@@ -32,6 +32,11 @@ Regras:
 - Mudança mínima — texto, cor, espaçamento, um typo — não precisa do bloco inteiro. Basta uma frase: o que mudou e como eu vejo que mudou. O bloco completo vale pra tudo que envolve lógica, comportamento ou dado novo.
 - Se alguma parte não der para testar manualmente, **diga isso e explique por quê**, em vez de inventar um passo.
 - Se o teste depender de algo que eu preciso preparar antes (banco rodando, `.env` preenchido, dado de exemplo), isso é o passo zero.
+- **Os casos de erro padrão**, para o que tem tela ou rede (do guia de UX): a rede em Offline e em Slow 4G, no DevTools; três cliques rápidos no botão que cria algo; Tab pelos campos sem digitar; e o cookie de sessão apagado antes de enviar. Use os que couberem na mudança.
+
+## Quando aparecer um bug
+
+Antes de corrigir, me mostre como achar o bug: como reproduzir, onde olhar (o console, a aba Network, um breakpoint, um log) e o que confirmou a causa. Depurar é a coisa mais importante para eu continuar sendo útil, mesmo com o avanço da IA.
 
 ## Versionamento
 
@@ -58,6 +63,7 @@ Quem lê o `CHANGELOG.md` é quem clicou no número da versão: a pessoa que usa
 - Mudança que ninguém nota não entra: refatoração, pasta reorganizada, teste, ferramenta de quem programa. Se a versão só tem isso, uma linha: "Ajustes por dentro, sem mudança para quem usa." Atualização de segurança entra, dita para quem usa.
 - No máximo duas frases por item. O porquê entra só quando ajuda a pessoa ("se o ícone velho continuar, feche e abra a aba").
 - Dentro de cada seção, o mais importante primeiro.
+- **Cada versão abre com "Nesta versão: …"**, uma frase só, logo abaixo do título e antes das seções, para quem abre a tela de versões entender a versão de relance. Os leitores de changelog dos projetos hoje ignoram essa linha sem quebrar, mas também não a mostram: cada um precisa de uma mudança pequena para exibi-la (pedido no roadmap do projeto).
 
 ### Pré-lançamento (alpha, beta, rc) e canal de estabilidade
 
@@ -103,6 +109,19 @@ Regras de manutenção:
 - Não instale biblioteca nova sem me dizer o que ela resolve e o que aconteceria sem ela.
 - Não crie arquivo que eu não pedi. Especialmente README extra, exemplo, teste de demonstração e arquivo de configuração "por precaução".
 
+## UX — o que a pessoa sente
+
+**UX é para programador.** A metade dos problemas de experiência se decide longe da tela: na API, no banco, no tratamento de erro. O guia, com os 22 temas de um minicurso de UX e o que cada um vira em cada projeto, mora em `Sistemas/UX.md` (ele não está neste repositório). Valem sempre:
+
+- **Toda tela que busca dados tem quatro estados desenhados:** carregando, erro (com "Tentar de novo"), vazio (com orientação) e sucesso.
+- **Erro útil:** a mensagem diz o que fazer e aparece embaixo do campo certo. Detalhe interno (stack trace, SQL, nome de tabela) nunca vaza. Na API, status certo e um `code` fixo por erro, para o front escolher a mensagem sem ler a frase.
+- **Formulário:** erro só no campo que a pessoa já tocou, e nada do que foi digitado se perde. O botão de enviar só *parece* desativado (`aria-disabled`): no clique, mostra o que falta e leva o foco ao primeiro campo pendente. Obrigatório leva asterisco com legenda, nunca só cor.
+- **Nada muda de lugar quando carrega:** imagem com `width` e `height`, e espaço reservado para aviso e mensagem de erro.
+- **Clique duplo não cria dois:** o botão vira "Enviando…" e o segundo clique não faz nada. Na API, o que cria algo aguenta o pedido repetido.
+- **Apagar pede confirmação antes, ou "Desfazer" depois.** O sucesso de uma ação é um aviso discreto, nunca um alerta que trava a tela.
+- **Toda requisição tem tempo máximo**, e a tela explica e oferece tentar de novo quando ele estoura.
+- **Imagem que a pessoa sobe tem tamanho padrão:** nem muito grande, nem muito pequena.
+
 ## Segredos e segurança
 
 - Senha, token e chave de API **nunca** entram no código. Vão em `.env`, e `.env` entra no `.gitignore`.
@@ -115,3 +134,4 @@ Regras de manutenção:
 - Commits pequenos e frequentes, mensagem em português no imperativo ("adiciona rota de login").
 - Não faça `git push` sem eu pedir, pergunte se pode primeiro.
 - Nunca trabalhe direto na `main` sem me avisar.
+- Apagar repositório no GitHub é pela página, por mim. Não dê ao `gh` a permissão `delete_repo`: ela fica no token da máquina e deixaria qualquer coisa que use o `gh` apagar qualquer repositório.

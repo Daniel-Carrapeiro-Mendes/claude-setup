@@ -18,7 +18,7 @@ Isso vale até o fim desta tarefa. Depois, voltam as regras de sempre.
 
 ## 1. Antes de começar
 
-1. Leia o `ROADMAP.md`, o mapa do projeto (`ARQUITETURA.md`, `ESTRUTURA.md` ou `CAMPANHA.md`) e os CLAUDE.md da pasta e da área. As regras da área continuam valendo: "Como testar", `ARQUITETURA.md`, `CHANGELOG.md`, versão, canon.
+1. Leia o `ROADMAP.md`, o mapa do projeto (`ARQUITETURA.md`, `ESTRUTURA.md`, `CAMPANHA.md` ou, na raiz de Projects, `MAPA.md`) e os CLAUDE.md da pasta e da área. As regras da área continuam valendo: "Como testar", `ARQUITETURA.md`, `CHANGELOG.md`, versão, canon.
 2. Se o projeto tem git e há **mudança sem commit**, pare e me pergunte o que fazer com ela, com a ferramenta de perguntas. É a única pergunta permitida, e só aqui: o meu trabalho pela metade não pode se misturar com o seu.
 3. Monte a rede de segurança (seção 4).
 4. Mande **uma** mensagem curta: o que você entendeu da tarefa, o seu plano em poucas linhas e onde o relatório vai ficar. Não espere resposta. Comece.
@@ -44,6 +44,14 @@ Mesmo com a liberdade acima, **não faça**:
 - Mexer fora deste projeto: em outro projeto, nos CLAUDE.md, nas skills ou na configuração do Claude.
 
 Quando a tarefa esbarrar num desses, **pule só essa parte**, anote em "Esperando você" com a sua recomendação e siga com o resto.
+
+### Exceções às travas
+
+Uma trava só se afrouxa com uma **lista de exceções escrita e datada por mim**, no "Próximo passo sugerido" do `ROADMAP.md` ou no prompt do `/independente`. Sem a lista, nada acima se afrouxa. Fora dela, a trava continua valendo, e o que esbarrar nela vai para "Esperando você".
+
+- Vale só para esta tarefa, e só para o que a lista diz, com as palavras dela. Em dúvida sobre se algo cabe, não cabe.
+- **Antes de editar ou apagar qualquer arquivo que não está em git**, guarde uma cópia em `~/Documents/Projects/.backup-manutencao-AAAA-MM-DD/`, espelhando o caminho a partir da pasta pessoal (`~/X` vira `.backup-manutencao-AAAA-MM-DD/X`). A cópia vem antes da primeira edição, e quem vai ser apagado é conferido com `cmp` contra a cópia antes. O relatório lista cada cópia e diz como voltar.
+- `git push`, `sudo`, segredo no código e canon de RPG não entram em exceção por conta própria: só se a lista nomear cada um.
 
 ## 4. Rede de segurança
 
@@ -77,7 +85,7 @@ Tudo o que você fizer precisa poder ser desfeito, ideia por ideia.
 5. **Ideias que eu não apliquei** — e por quê. Elas também estão nas Ideias soltas.
 6. **Suposições** — o que você supôs sem conseguir confirmar.
 7. **Como conferir** — no formato da área: "Como testar" em software, "o que conferir antes de levar pra mesa" em RPG.
-8. **Para desfazer** — branch, cada commit com hash curto e uma linha, e os arquivos tocados.
+8. **Para desfazer** — branch, cada commit com hash curto e uma linha, os arquivos tocados e, se houve exceções, as cópias de segurança e o comando para voltar cada uma.
 
 ## 7. No fim
 

@@ -59,7 +59,7 @@ Uma linha: se o computador vai **ficar ligado**, o Remote Control com `/celular`
 ### 2. O projeto pode ir?
 
 - Precisa ser repositório git com remoto no GitHub (`git remote -v`).
-- Se não for — uma campanha, a raiz `~/Documents/Projects`, uma pasta sem git —, **pare aqui**. Explique: a nuvem receberia uma cópia, mas o trabalho feito lá não teria como voltar. Recomende o Remote Control.
+- Se não for — uma campanha sem repositório no GitHub, a raiz `~/Documents/Projects`, uma pasta sem git —, **pare aqui**. Explique: a nuvem receberia uma cópia, mas o trabalho feito lá não teria como voltar. Recomende o Remote Control.
 
 ### 3. O que a nuvem não vai ver
 

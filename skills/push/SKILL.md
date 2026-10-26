@@ -3,10 +3,11 @@ name: push
 description: Envia os commits locais para o repositório remoto, depois de checar o estado do repositório e procurar segredos no que vai subir. Acionada apenas pelo usuário com /push.
 argument-hint: "[instruções extras opcionais]"
 disable-model-invocation: true
-context: fork
 model: haiku
 background: false
+# Sem "context: fork": num subagente, a caixa de aprovação do git push não aparecia e o push era recusado. Na conversa principal ela existe.
 # git push fica de fora de propósito: a regra "ask" do settings.json global vence o allowed-tools, e aqui liberaria até --force se ela sair.
+# Existe uma cópia no claude.ai. Mudou este arquivo, suba a cópia de novo (o cabeçalho de lá só aceita name, description e allowed-tools).
 allowed-tools:
   - Bash(git status)
   - Bash(git status *)
