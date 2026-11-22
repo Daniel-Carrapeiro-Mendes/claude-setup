@@ -1,7 +1,7 @@
 # Preferências pessoais — `<seu nome>`
 
 <!-- Vai em ~/.claude/CLAUDE.md — vale para TODOS os projetos desta máquina. -->
-<!-- Só entra aqui o que é verdade em QUALQUER área: software, livro de regras, campanha. -->
+<!-- Só entra aqui o que é verdade em QUALQUER área: software, livro de regras, campanha, canal. -->
 <!-- Regra de uma área vive no CLAUDE.md daquela pasta. Mantenha abaixo de 200 linhas. -->
 
 ## Sobre mim
@@ -33,6 +33,7 @@ Meus projetos ficam separados por área, e cada área tem o seu próprio CLAUDE.
 - `~/Documents/Projects/Sistemas/familia/CLAUDE.md` — um grupo de softwares que trocam dados e moram todos nessa pasta: o que eles têm em comum.
 - `~/Documents/Projects/RPGs/CLAUDE.md` — qualquer coisa do meu RPG de mesa.
 - Abaixo dele, um por projeto: o livro de regras (`RPGs/livro-de-regras/`) e cada campanha (`RPGs/Campanhas/<nome>/`).
+- `~/Documents/Projects/Sistemas/<projeto>/canal/CLAUDE.md` — o canal do YouTube (roteiros e pauta). Mora dentro de um projeto de software, mas é escrita: as regras de software de `Sistemas/` não valem lá.
 
 Regras:
 

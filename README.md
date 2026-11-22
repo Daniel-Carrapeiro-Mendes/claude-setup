@@ -22,8 +22,6 @@ Cada item mostra onde o arquivo fica na minha máquina. O link abre a cópia.
     conferir antes de entregar, versão, changelog escrito para quem usa, `ARQUITETURA.md`, segredos e git.
     - [`Sites/meu-site/CLAUDE.md`](exemplo/Projects/Sistemas/Sites/meu-site/CLAUDE.exemplo.md) —
       aperta uma regra: push na `main` publica o site, então tudo passa por branch e prévia.
-    - [`Sites/meu-app/CLAUDE.md`](exemplo/Projects/Sistemas/Sites/meu-app/CLAUDE.exemplo.md) —
-      acrescenta uma: ao fim de cada sessão, uma entrada no diário do projeto.
   - [`RPGs/CLAUDE.md`](exemplo/Projects/RPGs/CLAUDE.exemplo.md) — RPG de mesa é escrita, não
     software: desliga as práticas de código e diz como escrever.
     - [`livro-de-regras/CLAUDE.md`](exemplo/Projects/RPGs/livro-de-regras/CLAUDE.exemplo.md) —
@@ -38,13 +36,15 @@ Uma skill é um roteiro que o Claude Code segue quando eu digito o comando dela.
 No claude.ai, o cabeçalho de uma skill só aceita `name`, `description` e `allowed-tools`: se for
 subir uma delas lá, apague a linha `disable-model-invocation`.
 
-- [`/celular`](skills/celular/SKILL.md) — modo longe do computador: o que precisa da tela vira
-  teste pendente, e as respostas vêm escritas para eu ouvir.
+- [`/celular`](skills/celular/SKILL.md) — modo longe do computador: o que só dá para ver na máquina
+  vira uma linha em "Para conferir no computador", e as respostas vêm escritas para eu ouvir.
 - [`/checkup`](skills/checkup/SKILL.md) — "onde eu parei?": confere o roadmap contra o git, em vez
   de confiar nele. `checkup` também é apelido do `/doctor` embutido; nos meus testes a skill
   venceu, mas se na sua versão abrir o `/doctor`, renomeie.
 - [`/desligar`](skills/desligar/SKILL.md) — posso desligar a máquina agora? Confere o que está
   rodando, salva o estado e responde com um veredito.
+- [`/faxina`](skills/faxina/SKILL.md) — nada fica em aberto: junta as ideias, os pedidos, as
+  propostas e os relatórios do projeto, decide o que é óbvio e me pergunta só o que é meu.
 - [`/independente`](skills/independente/SKILL.md) — modo autônomo: o Claude toca a tarefa
   sozinho, deixa cada decisão fácil de desfazer, e no fim me entrega um relatório para revisar.
 - [`/limpar`](skills/limpar/SKILL.md) — passagem para uma sessão nova: salva o estado em arquivo e
@@ -54,11 +54,15 @@ subir uma delas lá, apague a linha `disable-model-invocation`.
 
 ### Em teste
 
-Esta eu ainda não usei de verdade, do começo ao fim. Fica aqui até eu usar; aí sobe para a
+Estas eu ainda não usei de verdade, do começo ao fim. Ficam aqui até eu usar; aí sobem para a
 lista de cima.
 
+- [`/audio`](skills/em-teste/audio/SKILL.md) — a mensagem veio de um ditado: o Claude lê pelo
+  sentido, diz como leu o que ficou duvidoso e segue com o trabalho.
 - [`/nuvem`](skills/em-teste/nuvem/SKILL.md) — passagem entre o computador e uma sessão na nuvem:
   diz o que fica para trás, salva o estado em arquivo e me ensina a voltar.
+- [`/retomar`](skills/em-teste/retomar/SKILL.md) — o limite de uso acabou no meio do trabalho: o
+  Claude confere o que ficou pela metade e continua do ponto exato em que parou.
 
 ## Autor
 

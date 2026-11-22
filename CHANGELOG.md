@@ -3,6 +3,21 @@
 O que mudou em cada versão deste repositório, da mais nova para a mais antiga.
 Cada versão tem data (`AAAA-MM-DD`) e as seções que forem usadas: Adicionado, Alterado, Corrigido, Removido.
 
+## 1.4.0 — 2026-11-22
+
+Nesta versão: três skills novas (uma já em uso, duas em teste), mais duas regras no exemplo de campanha, e o exemplo do diário sai.
+
+### Adicionado
+
+- `/faxina`: o Claude junta as ideias, os pedidos, as propostas e os relatórios abertos do projeto, decide o que é óbvio e me pergunta só o que é meu, até não sobrar nada em aberto. Já uso, então ela entra na lista principal.
+- Duas skills em "Em teste", porque ainda não usei nenhuma do começo ao fim: `/audio`, para a mensagem que veio de um ditado, e `/retomar`, para continuar de onde parou depois que o limite de uso acabou.
+- O exemplo de campanha pede, na preparação da sessão, um resumo de quem entra em cena e uma lista de músicas para buscar.
+- O `CLAUDE.md` global de exemplo mostra o `CLAUDE.md` de um canal de vídeo, que é escrita e não software, dentro da pasta de um projeto de software.
+
+### Removido
+
+- O exemplo do diário (`Sites/meu-app/`): ele pedia um diário "para quem está aprendendo a programar", o oposto do foco que o repositório tem hoje. Quem linkava esse arquivo precisa tirar o link. Tratei como exceção, sem subir para a 2.0.0, porque o exemplo contradizia o resto.
+
 ## 1.3.0 — 2026-11-22
 
 Nesta versão: o foco do repositório mudou (dominar a própria IA, e não aprender cada coisa a fundo), e as cópias passam a mostrar o jeito de trabalhar de hoje: o Claude decide mais sozinho e entrega em três partes.

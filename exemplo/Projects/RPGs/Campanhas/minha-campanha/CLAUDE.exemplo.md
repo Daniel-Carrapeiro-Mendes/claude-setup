@@ -58,3 +58,5 @@ Toda preparação termina com:
 2. **Onde pode precisar de rolagem** — os momentos, sem números. A mecânica é do mestre; sugestão de mecânica vem curta e marcada como opcional.
 3. **O que provavelmente vai sair do roteiro** — a decisão que os jogadores podem tomar e que você não previu, e o que eu faço se tomarem.
 4. **O que pode ficar pra próxima** se o tempo acabar.
+5. **Quem entra em cena** — um resumo de cada personagem: a narração para guiar, as dificuldades dos testes, os itens, a saúde e os recursos, os mistérios, os desafios e as recompensas. Se ele guarda um portão, se e como dá para passar. É a única duplicata da ficha que o mestre quer.
+6. **Músicas para buscar e baixar** — a cena, o clima que ela pede e, se houver, uma sugestão de faixa, marcada como sugestão. Eu troco o nome das músicas por um que faça sentido na cena (ex.: "Hipotermia", para lugares muito gelados e sinistros): ao sugerir trilha, fale pelo clima e pela cena, e use os meus nomes quando já existirem. Quando o próximo passo do roadmap for um preparo, lembre das músicas lá também.
