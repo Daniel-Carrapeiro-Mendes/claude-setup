@@ -30,7 +30,7 @@ Toda afirmação sobre o estado do projeto vem com a fonte: o arquivo ou o commi
 
 ## 1. Qual modo?
 
-- **Panorama** — a pasta é `~/Documents/Projects` ou uma pasta que agrupa projetos (uma área como `Sistemas/` ou `RPGs/`, ou uma categoria como `Sistemas/Sites/` ou `RPGs/Campanhas/`).
+- **Panorama** — a pasta é `~/Documents/Projects` ou uma pasta que agrupa projetos (uma área como `Sistemas/` ou `RPGs/`, ou uma categoria como `Sistemas/familia/` ou `RPGs/Campanhas/`).
 - **Projeto** — qualquer outra pasta com `ROADMAP.md`, `.git` ou `CLAUDE.md` próprio.
 - Se não der para saber, pergunte com a ferramenta de perguntas.
 
@@ -71,7 +71,7 @@ Depois, cruze:
 1. **Onde parei** — a última coisa concluída, com data e fonte.
 2. **Onde estou** — o que está pela metade e o que está travado.
 3. **Próximo passo sugerido** — uma tarefa, pequena o bastante para uma sessão.
-4. **Por quê** — e qual critério você usou: primeiro o que destrava outras tarefas; depois o que fecha o marco atual; por último o resto.
+4. **Por quê** — e o critério, só quando não for o primeiro: primeiro o que destrava outras tarefas; depois o que fecha o marco atual; por último o resto.
 
 Se o roadmap estiver desatualizado, abra o topo com um alerta de uma linha: há quanto tempo e quantos commits de diferença. Nesse caso, as quatro partes seguem **a realidade**, não o roadmap.
 
@@ -81,6 +81,7 @@ Se o roadmap estiver desatualizado, abra o topo com um alerta de uma linha: há 
 - **O que já foi feito** — o que fechou recentemente, pelo histórico.
 - **Marcos** — cada um com quantos itens feitos de quantos.
 - **Pendências soltas** — mudança sem commit, branch parada, TODO recente.
+- **Itens abertos** — quantos pedidos de outros projetos, ideias soltas, propostas esperando o meu "pode" e arquivos `RELATORIO-*.md` na raiz. Acima de 10, ou com relatório, recomende a `/faxina` (regra "Nada acumula", do global).
 - **Divergências** — cada item do passo 1.2, com a fonte.
 - **Correção proposta** — se o roadmap precisa mudar, mostre o trecho novo de "Onde estou" e "Próximo passo" num bloco, pronto para eu aprovar. Não grave.
 
@@ -106,6 +107,7 @@ Use `Glob` a partir da pasta pedida, procurando `**/ROADMAP.md`, `**/.git/HEAD` 
 - **Última atividade:** `git -C <pasta> log -1 --format=%cs`; sem git, `ls -lt <pasta>`.
 - **Onde parou:** a seção "Onde estou" do roadmap, resumida em uma linha. Leia só o começo do arquivo.
 - **Pendências:** `git -C <pasta> status --short` (conte os arquivos, não liste).
+- **Abertos:** pedidos de outros projetos + ideias soltas + propostas esperando o "pode" (citadas no roadmap) + arquivos `RELATORIO-*.md` na raiz do projeto. Acima de 10, ou com relatório, marque com ⚠️.
 - **Sinal:**
   - 🟢 roadmap em dia (sem commits depois da última mudança dele);
   - 🟡 roadmap desatualizado (diga quantos commits atrás);
@@ -115,8 +117,8 @@ Se passar de uns quinze projetos, delegue a coleta ao subagente `Explore`.
 
 ### 2.3 Responda
 
-1. Uma tabela: projeto (caminho curto) · última atividade · onde parou · sinal · pendências. Ordene da atividade mais recente para a mais antiga.
-2. **Sugestão de qual retomar** — um projeto só, com o porquê e o critério usado, nesta ordem:
+1. Uma tabela: projeto (caminho curto) · última atividade · onde parou · sinal · pendências · abertos. Ordene da atividade mais recente para a mais antiga. Abaixo dela, uma linha com os projetos marcados com ⚠️ e a recomendação de rodar `/faxina` em cada um.
+2. **Sugestão de qual retomar** — um projeto só, com o porquê, nesta ordem (diga o critério só quando não for o primeiro):
    1. o que destrava outro projeto (um roadmap que depende de outro);
    2. o que tem trabalho pela metade ou mudança sem commit — trabalho interrompido esfria rápido;
    3. o que está mais perto de fechar um marco.

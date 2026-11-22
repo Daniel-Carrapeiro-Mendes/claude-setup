@@ -32,7 +32,7 @@ Use os comandos do sistema operacional desta máquina. Não chute: se não conse
 A conversa vai sumir. Se o projeto tem `ROADMAP.md`:
 
 - Atualize "Onde estou" e "Próximo passo sugerido" com o estado real agora.
-- Teste que eu ainda preciso fazer no computador vai para "Testes pendentes no computador".
+- O que eu ainda preciso conferir no computador vai, em uma linha, para "Para conferir no computador", no topo do `ROADMAP.md`.
 - Decisão tomada nesta sessão que ainda não está escrita vai para "Decisões" do mapa do projeto.
 
 ## 3. O que você não consegue ver

@@ -24,12 +24,13 @@ Se você achar que alguma prática de software resolveria um problema real daqui
 
 ## Como chamar os personagens
 
-Nunca use "NPC". Soa como se esses personagens valessem menos que os outros. Eu separo em quatro, em todas as campanhas:
+Nunca use "NPC". Soa como se esses personagens valessem menos que os outros. Eu separo em cinco, em todas as campanhas:
 
 - **Protagonistas** — criados e jogados pelos jogadores.
 - **Personagens Principais** — o núcleo da campanha; a trama gira em torno deles, e em geral são muito bem desenvolvidos.
 - **Personagens Coadjuvantes** — encorpam o mundo; têm algum desenvolvimento, mas servem mais para ajudar os outros a ter o seu.
 - **Personagens Secundários** — avulsos, com pouco ou nenhum desenvolvimento; a história não é sobre eles.
+- **Figurantes** — o personagem de uma cena só, sem ficha; se a mesa voltar a ele, ganha cartão e pode subir de categoria.
 
 ## Canon e suposição
 

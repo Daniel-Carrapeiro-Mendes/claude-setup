@@ -18,7 +18,7 @@ Isso vale até o fim desta tarefa. Depois, voltam as regras de sempre.
 
 ## 1. Antes de começar
 
-1. Leia o `ROADMAP.md`, o mapa do projeto (`ARQUITETURA.md`, `ESTRUTURA.md`, `CAMPANHA.md` ou, na raiz de Projects, `MAPA.md`) e os CLAUDE.md da pasta e da área. As regras da área continuam valendo: "Como testar", `ARQUITETURA.md`, `CHANGELOG.md`, versão, canon.
+1. Leia o `ROADMAP.md`, o mapa do projeto (`ARQUITETURA.md`, `ESTRUTURA.md`, `CAMPANHA.md` ou, na raiz de Projects, `MAPA.md`) e os CLAUDE.md da pasta e da área. As regras da área continuam valendo: a entrega em três partes, `ARQUITETURA.md`, `CHANGELOG.md`, versão, canon.
 2. Se o projeto tem git e há **mudança sem commit**, pare e me pergunte o que fazer com ela, com a ferramenta de perguntas. É a única pergunta permitida, e só aqui: o meu trabalho pela metade não pode se misturar com o seu.
 3. Monte a rede de segurança (seção 4).
 4. Mande **uma** mensagem curta: o que você entendeu da tarefa, o seu plano em poucas linhas e onde o relatório vai ficar. Não espere resposta. Comece.
@@ -41,7 +41,7 @@ Mesmo com a liberdade acima, **não faça**:
 - Senha, token ou chave no código.
 - Mudar o **canon** de um projeto de RPG. Trama, regra ou personagem novo entra marcado no próprio texto como sugestão sua.
 - Mudar a ordem, o escopo ou a prioridade dos marcos do roadmap. Marcar item concluído e reescrever "Onde estou" e "Próximo passo" pode. Mudança de plano vira proposta no relatório.
-- Mexer fora deste projeto: em outro projeto, nos CLAUDE.md, nas skills ou na configuração do Claude.
+- Mexer fora deste projeto: em outro projeto, nos CLAUDE.md, nas skills ou na configuração do Claude. A exceção é o pedido: escrever em "Pedidos de outros projetos" no `ROADMAP.md` de outro projeto pode (regra do global).
 
 Quando a tarefa esbarrar num desses, **pule só essa parte**, anote em "Esperando você" com a sua recomendação e siga com o resto.
 
@@ -64,13 +64,13 @@ Tudo o que você fizer precisa poder ser desfeito, ideia por ideia.
 ## 5. Durante o trabalho
 
 - **Escreva o relatório enquanto trabalha**, não só no fim. Se a sessão cair ou a conversa for resumida, nada se perde.
-- Rode tudo o que dá para rodar sem mim: testes, build, verificador, um `curl`. O que só se confere olhando a tela vai para "Como conferir".
+- Rode tudo o que dá para rodar sem mim: testes, build, verificador, um `curl`, a tela num navegador sem janela. O que só eu consigo conferir vai para "Como conferir", em poucas linhas.
 - Se a tarefa se mostrar bem maior do que parecia — mudaria a arquitetura, ou levaria várias sessões —, pare num ponto consistente e relate. Um pedaço inteiro vale mais que tudo pela metade.
-- Ideia que você teve e decidiu **não** aplicar vai para as "Ideias soltas" do `ROADMAP.md`, marcada como sugestão sua e com a data.
+- Ideia que você teve e decidiu **não** aplicar fica **só no relatório** (parte 5), com o porquê. Ela entra no roadmap, ou some, quando eu revisar o relatório, na `/faxina`.
 
 ## 6. O relatório
 
-**Onde:** `RELATORIO-independente-AAAA-MM-DD.md`, na raiz do projeto. Se o projeto tem git, garanta que a linha `RELATORIO-independente-*.md` está em `.git/info/exclude` (a exclusão local, que não sobe para o GitHub nem aparece no `.gitignore`). Se já existir um relatório com a mesma data, acrescente `-2`, `-3`.
+**Onde:** `RELATORIO-independente-AAAA-MM-DD.md`, na raiz do projeto. Se o projeto tem git, garanta que a linha `RELATORIO-independente-*.md` está em `.git/info/exclude` (a exclusão local, que não sobe para o GitHub nem aparece no `.gitignore`). Um projeto tem **no máximo um relatório** (regra "Nada acumula", do global): se já existir um, de qualquer data, não crie outro. Acrescente no fim dele uma parte nova, com a data e a tarefa no título, e avise na primeira mensagem que há um relatório anterior esperando a minha revisão.
 
 **Tamanho:** sem limite. Quero tudo.
 
@@ -82,17 +82,17 @@ Tudo o que você fizer precisa poder ser desfeito, ideia por ideia.
 2. **Esperando você** — o que só eu posso decidir ou fazer, cada item com a sua recomendação.
 3. **O que foi feito** — passo a passo: o quê, por quê e quais alternativas você descartou.
 4. **Ideias que eu apliquei sem você pedir** — em destaque, porque são as que eu mais preciso revisar.
-5. **Ideias que eu não apliquei** — e por quê. Elas também estão nas Ideias soltas.
+5. **Ideias que eu não apliquei** — e por quê. Elas ficam só aqui, até eu decidir na revisão.
 6. **Suposições** — o que você supôs sem conseguir confirmar.
-7. **Como conferir** — no formato da área: "Como testar" em software, "o que conferir antes de levar pra mesa" em RPG.
+7. **Como conferir** — o que você já conferiu sozinho e o que deu, e, em poucas linhas, o que só eu consigo conferir (em RPG, "o que conferir antes de levar pra mesa"). Roteiro de teste completo, só se eu pedir.
 8. **Para desfazer** — branch, cada commit com hash curto e uma linha, os arquivos tocados e, se houve exceções, as cópias de segurança e o comando para voltar cada uma.
 
 ## 7. No fim
 
 Atualize o `ROADMAP.md` ("Onde estou", "Próximo passo", itens concluídos) e faça o último commit.
 
-Na sua última mensagem vão **só**: o resumo, o caminho do relatório e o "Como conferir". **O relatório inteiro vai para o chat só quando eu pedir.** Aí vai na íntegra, sem cortar nada.
+Na sua última mensagem vai **o relatório inteiro**, na íntegra, sem cortar nada, e depois o caminho do arquivo. Vale sempre, com ou sem `/celular`: eu ouço o relatório no chat.
 
-**Na nuvem** (quando `printenv CLAUDE_CODE_REMOTE` mostra `true`): lá, arquivo fora do git some quando a máquina da nuvem é desligada. Por isso, na nuvem, mande também o relatório inteiro na última mensagem — a conversa fica guardada em claude.ai/code. Diga que foi por isso.
+**Na nuvem** (quando `printenv CLAUDE_CODE_REMOTE` mostra `true`): lá, arquivo fora do git some quando a máquina da nuvem é desligada, e o relatório no chat é a cópia que fica (a conversa fica guardada em claude.ai/code). Diga isso na mensagem.
 
-Termine com o que eu faço depois de revisar, cada comando explicado: juntar a branch na `main`, desfazer uma ideia com `git revert`, ou descartar tudo. Quem decide sou eu.
+Termine com o que eu faço depois de revisar, cada comando explicado: juntar a branch na `main`, desfazer uma ideia com `git revert`, ou descartar tudo. Quem decide sou eu. Depois que eu ler, o relatório é decidido item por item e apagado na `/faxina`.

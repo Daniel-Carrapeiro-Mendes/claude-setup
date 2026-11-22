@@ -102,7 +102,7 @@ Confira se `~/.claude/CLAUDE.md` existe e leia a primeira linha: ela diz de que 
 ### 2. Salve o estado
 
 - Conforme a área: `ROADMAP.md` ("Onde estou", "Próximo passo", itens concluídos), `CHANGELOG.md` ou registro de sessões, e "Decisões" do mapa.
-- O que só dá para testar no computador (olhar a tela, abrir no navegador do PC, mexer na máquina) vai para a seção `## Testes pendentes no computador`, no topo do `ROADMAP.md`, acima de "Onde estou". Um bloco por mudança, com data, no formato completo do "Como testar" da área, legível sem esta conversa.
+- O que só dá para testar no computador (olhar a tela, abrir no navegador do PC, mexer na máquina) vai para a seção `## Para conferir no computador`, no topo do `ROADMAP.md`, acima de "Onde estou": uma linha por mudança, dizendo o que olhar e o que eu deveria ver. Roteiro de teste completo, só se eu pedir.
 
 ### 3. Commit
 
@@ -130,7 +130,7 @@ Pergunte com a ferramenta de perguntas, com estas duas opções:
 3. **Trazer o trabalho** (explique o comando e peça antes):
    - Se a `main` do GitHub avançou: `git pull --ff-only`. O `--ff-only` só avança; nunca mistura histórias. Se ele recusar, é porque o computador também mudou. Pare e explique.
    - Se o trabalho está num ramo da nuvem e eu quero a conversa junto: numa janela nova de terminal, na pasta do projeto, `claude --teleport` mostra a lista de sessões da nuvem. Depois de trazer, a sessão da nuvem pode ser arquivada em claude.ai/code, para eu não continuar nas duas.
-4. **Testes pendentes no computador:** se o `ROADMAP.md` tiver essa seção, comece por ela, na ordem. Conforme eu confirmo cada teste, remova o bloco. Teste que falhou vira item no roadmap, não some.
+4. **Para conferir no computador:** se o `ROADMAP.md` tiver essa seção (ou a antiga "Testes pendentes no computador"), me mostre a lista numa mensagem só. O que eu confirmar ou dispensar sai, e o que falhar vira item no roadmap.
 5. **Ramo velho no GitHub:** ramo da nuvem que já entrou na `main` fica lá, porque a nuvem não consegue apagá-lo. Ofereça apagar (`git push origin --delete <ramo>`), explicando o comando. Só com a minha licença.
 6. Atualize "Onde estou" no `ROADMAP.md`.
 

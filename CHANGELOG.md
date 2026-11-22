@@ -3,6 +3,24 @@
 O que mudou em cada versão deste repositório, da mais nova para a mais antiga.
 Cada versão tem data (`AAAA-MM-DD`) e as seções que forem usadas: Adicionado, Alterado, Corrigido, Removido.
 
+## 1.3.0 — 2026-11-22
+
+Nesta versão: o foco do repositório mudou (dominar a própria IA, e não aprender cada coisa a fundo), e as cópias passam a mostrar o jeito de trabalhar de hoje: o Claude decide mais sozinho e entrega em três partes.
+
+### Alterado
+
+- O README e o `CLAUDE.md` global de exemplo dizem o foco novo: dominar a própria IA, corrigindo os erros dela e otimizando como ela trabalha, para melhorar o resultado. Antes, o foco era aprender cada coisa a fundo.
+- O `CLAUDE.md` global decide sozinho o que é fácil de desfazer e só pergunta o que é meu de verdade. A entrega tem três partes (o que ficou pronto, o que foi decidido, o que só eu confiro), e o roteiro de teste só vem quando eu peço.
+- O global também ganhou o roadmap mantido pelo Claude, com a seção "Pedidos de outros projetos", a regra de um dono por arquivo quando há sessões em paralelo, o limite de 10 itens abertos por projeto ("Nada acumula"), o foco do mês e da semana, e a linha de modelo e esforço em todo prompt para colar em outra sessão.
+- O `CLAUDE.md` de software ganhou "Nome do projeto", "O que vai para o ar" e "Projetos que trocam dados", e a regra de botão com ícone. O Claude confere antes de entregar (o bloco "Como testar" só vem a pedido), e ao achar um bug ele mostra como achou, em vez de parar antes de corrigir.
+- O de RPG ganhou o Figurante, a quinta categoria de personagem.
+- `/celular`: o que só dá para ver na máquina vira uma linha em "Para conferir no computador", e o Claude não para esperando resposta.
+- `/independente`: um relatório só por projeto, e o relatório inteiro vai no chat no fim. As ideias que ele não aplicou ficam só no relatório.
+- `/checkup`: conta os itens abertos de cada projeto e recomenda limpar quando passam de 10.
+- `/limpar`: o prompt da sessão nova vem com o modelo e o esforço sugeridos, numa linha acima do bloco.
+- `/desligar` e `/nuvem`: seguem a mesma regra de "Para conferir no computador".
+- O README diz o que fazer com uma skill no claude.ai, onde o cabeçalho aceita menos campos.
+
 ## 1.2.0 — 2026-10-26
 
 ### Alterado

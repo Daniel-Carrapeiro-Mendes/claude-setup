@@ -37,4 +37,6 @@ Me dê um prompt curto, num bloco de código para eu copiar. Ele deve:
 - dizer qual é o próximo passo;
 - incluir **só** o que não coube em arquivo. Em geral, nada ou quase nada.
 
+Logo acima do bloco, fora dele, uma linha com o modelo e o esforço que você sugere para a sessão nova, com o porquê (a tabela de "Modelo e esforço" do CLAUDE.md global). Fica fora porque eu troco o modelo antes de colar.
+
 Se o prompt ficar longo, faltou salvar alguma coisa em arquivo. Volte ao passo 2.

@@ -1,8 +1,9 @@
 # claude-setup
 
-Configurei o [Claude Code](https://claude.com/claude-code) para me ensinar, e não para fazer por
-mim: em cada projeto, eu quero entender o que foi feito, não só ter o resultado pronto. Isso está
-escrito em arquivos `CLAUDE.md`, que o Claude Code lê sozinho ao trabalhar numa pasta. Eu tenho um
+Configurei o [Claude Code](https://claude.com/claude-code) para o meu foco: dominar a própria IA,
+corrigindo os erros dela e otimizando como ela trabalha, para melhorar o resultado. Eu faço isso
+com `CLAUDE.md` por nível, skills e o uso otimizado de subagentes; aqui estão os `CLAUDE.md` e as
+skills. Os `CLAUDE.md` são arquivos que o Claude Code lê sozinho ao trabalhar numa pasta. Eu tenho um
 por nível, do que vale sempre até o que só vale num projeto, e quando dois discordam, o mais
 específico vence. As cópias aqui se chamam `CLAUDE.exemplo.md`, para o Claude Code não as ler como
 instrução de verdade. Para usar uma, renomeie para `CLAUDE.md` e troque os marcadores entre `<>`
@@ -14,10 +15,11 @@ meu jeito de trabalhar.
 Cada item mostra onde o arquivo fica na minha máquina. O link abre a cópia.
 
 - [`~/.claude/CLAUDE.md`](exemplo/claude-global/CLAUDE.exemplo.md) — o que vale sempre: como me
-  explicar as coisas, o que fazer antes de executar, como entregar e como trazer ideias.
+  explicar as coisas, quando decidir sozinho e quando perguntar, como entregar, o formato do roadmap
+  e como trazer ideias.
 - `~/Documents/Projects/`
   - [`Sistemas/CLAUDE.md`](exemplo/Projects/Sistemas/CLAUDE.exemplo.md) — projetos de software:
-    bloco "Como testar", versão, changelog escrito para quem usa, `ARQUITETURA.md`, segredos e git.
+    conferir antes de entregar, versão, changelog escrito para quem usa, `ARQUITETURA.md`, segredos e git.
     - [`Sites/meu-site/CLAUDE.md`](exemplo/Projects/Sistemas/Sites/meu-site/CLAUDE.exemplo.md) —
       aperta uma regra: push na `main` publica o site, então tudo passa por branch e prévia.
     - [`Sites/meu-app/CLAUDE.md`](exemplo/Projects/Sistemas/Sites/meu-app/CLAUDE.exemplo.md) —
@@ -33,6 +35,8 @@ Cada item mostra onde o arquivo fica na minha máquina. O link abre a cópia.
 
 Uma skill é um roteiro que o Claude Code segue quando eu digito o comando dela. As minhas ficam em
 `~/.claude/skills/<nome>/SKILL.md`, nenhuma roda sem eu chamar, e todas estas eu já usei de verdade.
+No claude.ai, o cabeçalho de uma skill só aceita `name`, `description` e `allowed-tools`: se for
+subir uma delas lá, apague a linha `disable-model-invocation`.
 
 - [`/celular`](skills/celular/SKILL.md) — modo longe do computador: o que precisa da tela vira
   teste pendente, e as respostas vêm escritas para eu ouvir.

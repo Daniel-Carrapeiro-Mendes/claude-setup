@@ -10,25 +10,13 @@ Estou usando o Remote Control pelo celular. O computador continua ligado e você
 
 Isso vale até o fim desta sessão, ou até eu dizer que cheguei.
 
-## O bloco "Como testar" muda
+## Conferir muda
 
-Separe cada teste em três grupos:
+**Você mesmo verifica** tudo o que dá para confirmar rodando comando na máquina: testes automatizados, build, `curl` numa rota, ler um log, conferir um arquivo gerado, abrir a tela num navegador sem janela. Rode e me conte o resultado em uma linha. Não me passe como tarefa o que você consegue fazer sozinho.
 
-1. **Você mesmo verifica**: tudo que dá para confirmar rodando comando na máquina. Testes automatizados, build, `curl` numa rota, ler um log, conferir um arquivo gerado. Rode e me mostre o resultado resumido. Não me passe como tarefa o que você consegue fazer sozinho.
-2. **Dá pra fazer pelo celular**: só se existir de verdade. Por exemplo, uma URL pública que eu consigo abrir no celular. Se não houver nenhum, diga "nenhum" e não invente.
-3. **Só no computador**: tudo que depende de ver a tela ou mexer na máquina. Esses **não** vão para a resposta. Vão para o `ROADMAP.md`.
+**O que só eu consigo conferir**, olhando a tela ou mexendo na máquina, não vira roteiro de teste: vira **uma linha por mudança** na seção `## Para conferir no computador`, no topo do `ROADMAP.md`, acima de "Onde estou". A linha diz o que olhar e o que eu deveria ver ("o cartão acende quando a peça passa por cima"). Se dá para ver pelo celular (uma URL pública), a linha traz o endereço. Na resposta, só avise: "N linhas novas em Para conferir no computador".
 
-Em projeto sem testes (livro de regras, campanha), vale só a parte de como escrever as respostas. O que precisar ser conferido na máquina vai para os pendentes do mesmo jeito.
-
-## Testes pendentes no ROADMAP.md
-
-Mantenha no topo do `ROADMAP.md`, acima de "Onde estou", a seção `## Testes pendentes no computador`:
-
-- Um bloco por mudança, com data e o nome do que mudou.
-- Cada bloco no formato completo do "Como testar": comando, onde olhar, passo a passo, sinal de que deu certo e caso de erro. Ele tem que dar pra ler de uma vez, sem precisar desta conversa.
-- Os blocos ficam na ordem em que devem ser feitos. Se um teste depende de outro, diga.
-
-Na resposta pelo celular, só avise em uma linha: "N testes adicionados aos pendentes do ROADMAP.md".
+Em projeto sem testes (livro de regras, campanha), vale só a parte de como escrever as respostas.
 
 ## Respostas pelo celular
 
@@ -37,8 +25,8 @@ Eu **ouço** as respostas pelo celular, como um podcast. Por isso:
 - **Longas e detalhadas.** Explique o que fez, por que fez, e o que isso muda. Não corte o detalhe esperando eu pedir.
 - **Escreva para ser ouvido.** Prosa corrida, com começo, meio e fim. O resultado vem primeiro, e a explicação vem depois.
 - Evite tabela, bloco de código longo e lista de símbolos. Lido em voz alta, isso vira ruído. Se eu precisar ver código, mostre só o trecho que mudou e diga em palavras o que ele faz.
-- Pode fazer quantas perguntas precisar. No formato de opções para eu selecionar (regra do CLAUDE.md global). Quando a pergunta depende de um texto que eu preciso ler, o texto vai no chat e as perguntas vão no painel de opções, como no computador.
+- **Não pare esperando resposta.** No `/celular` eu estou sempre ocupado: ouço e anoto as ideias para a `/faxina`, mas não respondo no meio. Dúvida vira decisão anotada, com a sua recomendação e o porquê (no relatório, se houver um, ou no `ROADMAP.md`), e você segue. Entre duas saídas razoáveis, escolha a mais fácil de desfazer. O que só eu posso decidir, e o que é destrutivo ou difícil de desfazer, não se faz: fica anotado nos arquivos, à minha espera.
 
 ## Quando eu voltar
 
-Quando eu disser que cheguei, comece pelos **Testes pendentes no computador**, na ordem. Conforme eu confirmo cada teste, remova o bloco dele. Teste que falhou vira item no roadmap, não some.
+Quando eu disser que cheguei, me mostre a lista "Para conferir no computador" numa mensagem só. Eu olho o que quiser e digo o que achei: o que eu confirmar ou dispensar sai da lista, e o que falhar vira item no roadmap. Roteiro de teste, só se eu pedir.

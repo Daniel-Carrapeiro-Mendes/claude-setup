@@ -10,33 +10,37 @@ Este arquivo vale para projeto que eu pretendo manter. Para teste rápido, prot�
 
 Se eu decidir manter o projeto depois, as regras passam a valer dali pra frente. Não precisa voltar e arrumar o que já foi feito antes.
 
+## Nome do projeto
+
+Todo software meu tem **nome e título**, no formato `Nome: Título` (por exemplo, `Meu App: Organizando Tarefas`). Cada um pode ser chamado pelo nome, pela sigla do título, pelos dois ou pelo nome completo. O nome completo aparece onde a pessoa vê o projeto pela primeira vez: o título do README, a tela "sobre", o `<title>` da página. Num app de uma família de projetos, ele também vai no cabeçalho da interface, com um selo "beta" ao lado da versão enquanto ela começar com `0.` (o selo não muda o número).
+
+O título é escolha minha. Projeto sem título fica só com o nome até eu escolher, e você não inventa um. Projeto em grupo fica fora.
+
+## O que vai para o ar
+
+Site publicado só leva o que a pessoa usa. Documento do projeto (`CLAUDE.md`, `ROADMAP.md`, `CHANGELOG.md`, `ARQUITETURA.md`...) fica no repositório, fora da pasta que o serviço publica: o `dist/` do build ou, num site sem build, uma subpasta como `site/`. A raiz do repositório nunca é a pasta publicada. Para conferir depois do deploy: o endereço do site com `/ROADMAP.md` no fim não pode devolver o documento.
+
+## Projetos que trocam dados
+
+Projetos que trocam dados guardam do mesmo jeito. Eles moram numa pasta só, cada um na sua subpasta, e o formato dos dados fica num arquivo comum, na raiz dessa pasta. O que eles têm em comum está no `CLAUDE.md` de lá. Antes de criar ou mudar um dado que outro projeto vai ler (um cadastro, um perfil, uma ficha), leia esse arquivo e siga o que está lá. Se o que você precisa não está lá, não crie um formato próprio: deixe o pedido no `ROADMAP.md` da pasta (regra "Regra geral sobe", do global).
+
 ## Roadmap
 
 No `ROADMAP.md` (regras no CLAUDE.md global), **um marco é uma versão alvo**: `0.2.0`, `0.3.0`, `1.0.0-beta.1`, `1.0.0`. Quando um marco fecha, os itens dele viram a entrada daquela versão no `CHANGELOG.md`, **reescritos para quem usa**, com as regras de "Como escrever o changelog" (abaixo). Item de roadmap é escrito para quem programa; copiado sem reescrever, ele vaza para o usuário.
 
-## Depois de implementar — bloco "Como testar" obrigatório
+## Depois de implementar — confira você, e me conte o que decidiu
 
-Toda vez que você terminar uma implementação, **encerre a resposta com um bloco "Como testar"**. Sem ele, a tarefa não está entregue.
+A entrega segue as três partes do CLAUDE.md global: o que ficou pronto e onde eu vejo, as decisões que você tomou, e o que só eu consigo conferir.
 
-O bloco tem que ter, nesta ordem:
-
-1. **O comando exato** para rodar, e de qual pasta.
-2. **Onde olhar** — a URL, a tela, o arquivo ou a saída do terminal.
-3. **O passo a passo numerado**, escrito para alguém que não conhece o código. "Clique em X, digite Y, aperte Z" — não "verifique se a rota responde".
-4. **O sinal concreto de que deu certo.** Um valor, uma mensagem, uma tela específica. Nunca "deve funcionar".
-5. **Pelo menos um caso de erro:** o que eu faço para provocar a falha de propósito, e o que deve acontecer. Se eu só testar o caminho feliz, não testei nada.
-
-Regras:
-
-- Teste só o que mudou nesta tarefa. Não repita o roteiro do projeto inteiro toda vez.
-- Mudança mínima — texto, cor, espaçamento, um typo — não precisa do bloco inteiro. Basta uma frase: o que mudou e como eu vejo que mudou. O bloco completo vale pra tudo que envolve lógica, comportamento ou dado novo.
-- Se alguma parte não der para testar manualmente, **diga isso e explique por quê**, em vez de inventar um passo.
-- Se o teste depender de algo que eu preciso preparar antes (banco rodando, `.env` preenchido, dado de exemplo), isso é o passo zero.
-- **Os casos de erro padrão**, para o que tem tela ou rede (do guia de UX): a rede em Offline e em Slow 4G, no DevTools; três cliques rápidos no botão que cria algo; Tab pelos campos sem digitar; e o cookie de sessão apagado antes de enviar. Use os que couberem na mudança.
+- **Quem testa primeiro é você.** Rode os testes, suba o projeto, abra a tela (ou chame a rota) e provoque pelo menos um erro de propósito. Diga em uma linha o que conferiu e o que deu. Se só o caminho feliz foi testado, não foi testado.
+- **"Onde eu vejo" é concreto:** o comando para subir, de qual pasta, e o endereço ou a tela para abrir. Eu quero experimentar, não seguir um roteiro.
+- **O bloco "Como testar" só vem quando eu pedir.** Aí ele tem, nesta ordem: o comando exato e a pasta; onde olhar; o passo a passo numerado, para quem não conhece o código; o sinal concreto de que deu certo; e pelo menos um caso de erro. O que eu preciso preparar antes é o passo zero.
+- **Sem lista de testes pendentes no roadmap.** O que só eu consigo conferir (o dedo no celular, o som, o visual) vai em uma ou duas linhas na entrega. Se ficar para depois, vira um item comum do marco, em uma linha.
+- **Os casos de erro padrão**, para você provocar no que tem tela ou rede (do guia de UX): a rede em Offline e em Slow 4G; três cliques rápidos no botão que cria algo; Tab pelos campos sem digitar; e o cookie de sessão apagado antes de enviar. Use os que couberem na mudança.
 
 ## Quando aparecer um bug
 
-Antes de corrigir, me mostre como achar o bug: como reproduzir, onde olhar (o console, a aba Network, um breakpoint, um log) e o que confirmou a causa. Depurar é a coisa mais importante para eu continuar sendo útil, mesmo com o avanço da IA.
+Corrija, e na entrega me mostre como você achou: como reproduzir, onde olhar (o console, a aba Network, um breakpoint, um log) e o que confirmou a causa. Depurar é a coisa mais importante para eu continuar sendo útil, mesmo com o avanço da IA, e é lendo o seu caminho que eu aprendo.
 
 ## Versionamento
 
@@ -121,6 +125,7 @@ Regras de manutenção:
 - **Apagar pede confirmação antes, ou "Desfazer" depois.** O sucesso de uma ação é um aviso discreto, nunca um alerta que trava a tela.
 - **Toda requisição tem tempo máximo**, e a tela explica e oferece tentar de novo quando ele estoura.
 - **Imagem que a pessoa sobe tem tamanho padrão:** nem muito grande, nem muito pequena.
+- **Botão é ícone, sempre que der**: lápis edita, lixeira apaga. O texto só fica na ação principal da tela (junto do ícone) e na ação rara ou de consequência própria, que nenhum desenho explica. Todo botão sem texto tem nome para o leitor de tela e mostra esse nome no mouse e no foco do teclado. Os ícones padrão e o jeito de fazer estão no guia de UX, "Botões com ícone".
 
 ## Segredos e segurança
 
